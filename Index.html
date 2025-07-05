@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>AnimeHindiCranchFlix</title></head>
+<body>
+<h1>AnimeHindiCranchFlix</h1>
+<div id="categories"></div>
+<script>
+// JSON list for anime (example)
+const animeList = [
+  {title:"Naruto",image:"https://i.imgur.com/naruto.jpg",link:"https://www.youtube.com/embed/..."}, 
+  // Add more
+];
+const container = document.getElementById('categories');
+container.innerHTML = animeList.map(a =>
+  `<div>
+     <h3>${a.title}</h3>
+     <img src="${a.image}" width="200"/>
+     <p><a href="${a.link}" target="_blank">Watch Now</a></p>
+   </div>`
+).join('');
+</script>
+</body>
+</html>
